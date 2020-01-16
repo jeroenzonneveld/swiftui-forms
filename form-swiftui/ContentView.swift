@@ -23,8 +23,17 @@ struct PersonalDetailsFormView: View {
 
     @State private var acceptedTerms: Bool = true
     @State private var selectedGenderIndex: Int = 0
+    @State private var selectedAnimalIndex: Int = 0
 
     private var genderOptions = ["🙍‍♂️ Male", "🙍‍♀️ Female", "🤖 Other"]
+    private var animalOptions = [
+        "🐴 Horse",
+        "🐢 Turtle",
+        "🐶 Dog",
+        "🐱 Cat",
+        "🐭 Mouse",
+        "🦆 Duck",
+    ]
 
     var body: some View {
         NavigationView {
@@ -43,6 +52,14 @@ struct PersonalDetailsFormView: View {
                 Section(header: Text("Birthday")) {
                     DatePicker(selection: $birthday, in: ...Date(), displayedComponents: .date) {
                         Text("Birthday")
+                    }
+                }
+                
+                Section(header: Text("Preferences")) {
+                    Picker("Favorite animal", selection: $selectedAnimalIndex) {
+                        ForEach(0..<animalOptions.count) {
+                            Text(self.animalOptions[$0])
+                        }
                     }
                 }
 
