@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		062C0AAA23CD04370048A4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062C0AA923CD04370048A4BF /* Assets.xcassets */; };
 		062C0AAD23CD04370048A4BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062C0AAC23CD04370048A4BF /* Preview Assets.xcassets */; };
 		062C0AB023CD04370048A4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062C0AAE23CD04370048A4BF /* LaunchScreen.storyboard */; };
+		069F91652452290A00A97112 /* SwiftUIFormHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 069F91642452290A00A97112 /* SwiftUIFormHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069F91652452290A00A97112 /* SwiftUIFormHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,9 @@
 			dependencies = (
 			);
 			name = "form-swiftui";
+			packageProductDependencies = (
+				069F91642452290A00A97112 /* SwiftUIFormHelper */,
+			);
 			productName = "form-swiftui";
 			productReference = 062C0AA023CD04360048A4BF /* form-swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 062C0A9723CD04360048A4BF;
+			packageReferences = (
+				069F91632452290A00A97112 /* XCRemoteSwiftPackageReference "SwiftUIFormHelper" */,
+			);
 			productRefGroup = 062C0AA123CD04360048A4BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		069F91632452290A00A97112 /* XCRemoteSwiftPackageReference "SwiftUIFormHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jeroenzonneveld/SwiftUIFormHelper.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		069F91642452290A00A97112 /* SwiftUIFormHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 069F91632452290A00A97112 /* XCRemoteSwiftPackageReference "SwiftUIFormHelper" */;
+			productName = SwiftUIFormHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 062C0A9823CD04360048A4BF /* Project object */;
 }

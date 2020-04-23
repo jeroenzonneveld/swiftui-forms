@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftUIFormHelper
 
 struct PersonalDetailsFormView: View {
 
@@ -73,6 +74,8 @@ struct PersonalDetailsFormView: View {
                     Toggle("I agree to the terms & conditions", isOn: $acceptedTerms)
                 }
             }.navigationBarTitle("Personal information")
+            .enableKeyboardOffset()
+            .hideKeyboardOnTap()
         }
     }
 }
